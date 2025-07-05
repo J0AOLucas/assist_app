@@ -7,6 +7,8 @@ https://nodejs.org/en/download
 
 # Install dependencies
 npm install
+npm install @react-navigation/native @react-navigation/stack
+## add the npm install roboto
 
 # Start the development server
 npm start

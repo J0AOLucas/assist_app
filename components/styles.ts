@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   header: {
     backgroundColor: '#586994',
-    paddingTop: 10,
+    paddingTop: 20,
     paddingBottom: 15,
     paddingHorizontal: 20,
     alignItems: 'center',
@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    zIndex: 1000
   },
   headerTitle: {
     fontSize: 16,
@@ -30,4 +31,28 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  button: {
+    flexDirection: 'row',
+    paddingVertical: 15,
+    paddingHorizontal: 5,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: 190,
+    height: 50,
+    marginBottom: 15
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: '600',
+    marginLeft: 20,
+  },
+  buttonWhiteSquare: {
+    backgroundColor: 'white',
+    width: 53,
+    height: 42,
+    borderTopRightRadius: 25,
+    borderBottomRightRadius: 25,
+  }
 }); 
