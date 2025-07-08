@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { styles } from '../styles';
 import { Header } from '../components/Header';
 import { Button } from '../components/Button';
 
 export const HandsScreen = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor:'#c2dbef' }]}>
       <Header />
       <Text style={styles.title}>Hands-On</Text>
+      <Image
+        source={require('../assets/Hands.png')}
+        style={{ width: 200, height: 200, marginBottom: 20 }}
+        resizeMode="contain"
+      />
       <Text style={styles.text}>Content Hands-On Learning.</Text>
       <Button 
         title="Back" 
