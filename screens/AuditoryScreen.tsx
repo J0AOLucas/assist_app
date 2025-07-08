@@ -10,6 +10,7 @@ export const AuditoryScreen = ({ navigation }) => {
       <Header />
       <Text style={styles.title}>Auditory</Text>
       <Text style={styles.text}>Content Auditory Learning.</Text>
+      <Text style={styles.text}>Hello, this is a test.</Text>
       <Button 
         title="Back" 
         backgroundColor="#FF3B30"
