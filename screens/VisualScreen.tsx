@@ -7,6 +7,11 @@ import { Button } from '../components/Button';
 export const VisualScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
+<Button 
+  title="Back" 
+  backgroundColor="#FF3B30"
+  onPress={() => navigation.goBack()}
+/>
       <Header />
       <Text style={styles.title}>Visual</Text>
       {/* heading image */}
@@ -16,11 +21,6 @@ export const VisualScreen = ({ navigation }) => {
 
 
 To enhance visual learning, it’s helpful to use flashcards, color-coded notes, concept maps, and videos. Tools like drawing out processes, using symbols, and highlighting key points with colors can reinforce understanding. Digital platforms that combine visuals with educational content, like Picmonic, are especially effective. By engaging their visual strengths, students can make studying more efficient and enjoyable, particularly when dealing with large volumes of information or intricate subjects.</Text>
-<Button 
-  title="Back" 
-  backgroundColor="#FF3B30"
-  onPress={() => navigation.goBack()}
-/>
     </View>
   );
 };
