@@ -18,26 +18,21 @@ export const VisualScreen = ({ navigation }) => {
     "https://www.w3schools.com/html/mov_bbb.mp4",
     (player) => {
       player.loop = true;
-      player.play();
+      // Removed player.play() to prevent auto-play
     }
   );
   const instructurePlayer = useVideoPlayer(
     "https://www.w3schools.com/html/movie.mp4",
     (player) => {
       player.loop = true;
-      player.play();
+      // Removed player.play() to prevent auto-play
     }
   );
 
   return (
     <View style={styles.container}>
-      <Button
-        title="Back"
-        backgroundColor="#FF3B30"
-        onPress={() => navigation.goBack()}
-      />
       <Header />
-      <ScrollView>
+      <ScrollView contentContainerStyle={styles.centralizedContent}>
         <Text style={styles.title}>Visual</Text>
         {/* heading image */}
         <Image
@@ -130,6 +125,11 @@ export const VisualScreen = ({ navigation }) => {
             marginBottom: 20,
           }}
           nativeControls
+        />
+        <Button
+          title="Back"
+          backgroundColor="#FF3B30"
+          onPress={() => navigation.goBack()}
         />
       </ScrollView>
     </View>

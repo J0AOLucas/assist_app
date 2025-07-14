@@ -1,32 +1,37 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 80
+    backgroundColor: "#fff",
+    alignItems: "center",
+    paddingTop: 80,
   },
   title: {
+    textAlign: "center",
     fontSize: 37,
-    fontWeight: 'bold',
-    color: '#586994',
+    fontWeight: "bold",
+    color: "#586994",
     marginBottom: 20,
-    marginTop: 80
+    marginTop: 80,
   },
   text: {
     fontSize: 16,
-    color: '#586994',
-    textAlign: 'center',
+    color: "#586994",
+    textAlign: "center",
     marginHorizontal: 50,
-    marginBottom: 30
+    marginBottom: 30,
   },
   home_image: {
     width: 347,
     height: 235,
-    marginBottom: 30
+    marginBottom: 30,
   },
-  contentContainerStyle: { 
-    alignItems: 'center',
-  }
-}); 
+  contentContainerStyle: {
+    alignItems: "center",
+  },
+  centralizedContent: {
+    alignItems: "center",
+    paddingBottom: 40,
+  },
+});
