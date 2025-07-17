@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
   },
   contentContainerStyle: {
     alignItems: "center",
+    marginBottom: 50
   },
   centralizedContent: {
     alignItems: "center",
