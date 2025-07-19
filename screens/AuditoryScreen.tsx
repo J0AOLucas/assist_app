@@ -5,6 +5,7 @@ import {
   ScrollView,
   Linking,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { useVideoPlayer, VideoView } from "expo-video";
 import { styles } from "../styles";
@@ -37,6 +38,17 @@ export const AuditoryScreen = ({ navigation }) => {
         contentContainerStyle={{ alignItems: "center", paddingBottom: 40 }}
       >
         <Text style={styles.title}>Auditory</Text>
+        <Image
+          source={require("../components/assets/home_main_picture.png")}
+          style={{
+            width: 300,
+            height: 200,
+            borderRadius: 12,
+            marginBottom: 20,
+            marginTop: 10,
+          }}
+          resizeMode="cover"
+        />
         {/* Visual Learner Tips */}
         <Text style={[styles.text, { fontWeight: "bold", marginBottom: 10 }]}>
           6 Tips for Visual Learners:
