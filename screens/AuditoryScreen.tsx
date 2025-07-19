@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { useVideoPlayer, VideoView } from "expo-video";
+
 import { styles } from "../styles";
 import { Header } from "../components/Header";
 import { Button } from "../components/Button";
@@ -22,14 +22,6 @@ const visualTips = [
 ];
 
 export const AuditoryScreen = ({ navigation }) => {
-  // Sample video for demonstration; replace with a direct video file link if available
-  const player = useVideoPlayer(
-    "https://www.w3schools.com/html/mov_bbb.mp4",
-    (player) => {
-      player.loop = true;
-    }
-  );
-
   return (
     <View style={styles.container}>
       <Header />
@@ -112,16 +104,6 @@ export const AuditoryScreen = ({ navigation }) => {
             https://www.theottoolbox.com/activities-for-auditory-learners/
           </Text>
         </TouchableOpacity>
-        <VideoView
-          player={player}
-          style={{
-            width: 320,
-            height: 180,
-            borderRadius: 12,
-            marginBottom: 20,
-          }}
-          nativeControls
-        />
         <Text style={styles.text}>Content Auditory Learning.</Text>
         <Text style={styles.text}>
           Auditory learners understand and remember information best through
