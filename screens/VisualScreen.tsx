@@ -7,28 +7,12 @@ import {
   TouchableOpacity,
   Linking,
 } from "react-native";
-import { useVideoPlayer, VideoView } from "expo-video";
+
 import { styles } from "../styles";
 import { Header } from "../components/Header";
 import { Button } from "../components/Button";
 
 export const VisualScreen = ({ navigation }) => {
-  // Sample video for demonstration; replace with a direct video file link if available
-  const picmonicPlayer = useVideoPlayer(
-    "https://www.w3schools.com/html/mov_bbb.mp4",
-    (player) => {
-      player.loop = true;
-      // Removed player.play() to prevent auto-play
-    }
-  );
-  const instructurePlayer = useVideoPlayer(
-    "https://www.w3schools.com/html/movie.mp4",
-    (player) => {
-      player.loop = true;
-      // Removed player.play() to prevent auto-play
-    }
-  );
-
   return (
     <View style={styles.container}>
       <Header />
@@ -36,7 +20,7 @@ export const VisualScreen = ({ navigation }) => {
         <Text style={styles.title}>Visual</Text>
         {/* heading image */}
         <Image
-          source={require("../assets/home_main_picture.png")}
+          source={require("../components/assets/home_main_picture.png")}
           style={styles.home_image}
         />
         <Text style={styles.text}>Content Visual Learning.</Text>
@@ -81,16 +65,6 @@ export const VisualScreen = ({ navigation }) => {
             https://www.picmonic.com/pages/visual-learning-tips-resources-for-every-student/
           </Text>
         </TouchableOpacity>
-        <VideoView
-          player={picmonicPlayer}
-          style={{
-            width: 320,
-            height: 180,
-            borderRadius: 12,
-            marginBottom: 20,
-          }}
-          nativeControls
-        />
         {/* Visual learning practices section */}
         <Text style={[styles.text, { fontWeight: "bold", marginTop: 20 }]}>
           Talks about what visual learning is and what practices are best for
@@ -116,16 +90,6 @@ export const VisualScreen = ({ navigation }) => {
             https://www.instructure.com/resources/blog/visual-learning-effective-strategies-and-best-practices
           </Text>
         </TouchableOpacity>
-        <VideoView
-          player={instructurePlayer}
-          style={{
-            width: 320,
-            height: 180,
-            borderRadius: 12,
-            marginBottom: 20,
-          }}
-          nativeControls
-        />
         <Button
           title="Back"
           backgroundColor="#FF3B30"
